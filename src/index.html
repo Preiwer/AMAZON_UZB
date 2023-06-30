@@ -1,15 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMAZON_UZB</title>
 </head>
-<body>
+
+<body class="bg-yellow">
+  <div class="circle_1 circle"></div>
+  <div class="circle_2 circle"></div>
+  <header>
+    <div class="logo">
+      <h1 style="font-weight: bolder;">🇺🇿 Amazon</h1>
+    </div>
+    <div class="search_container">
+      <input placeholder="Search что-то..." type="text" id="search">
+      <button id="search_btn">🔍 Search</button>
+    </div>
+    <div class="cardbtn_container" style="z-index: 100000;cursor: pointer;">
+      <div class="count">0</div>
+      <button class="cardbtn">🪣</button>
+    </div>
+  </header>
+  <div class="dialog">
+    <div class="box">
+      <div class="header">
+        <button class="close" style="cursor: pointer; margin-bottom: 20px;">❌</button>
+        <h3 class="total"></h3>
+      </div>
+      <div class="content">
+        <div class="item">
+          <p>Office Shirt</p>
+          <p>100$</p>
+          <span>❎</span>
+        </div>
+        <div class="item">
+          <p>Office Shirt</p>
+          <p>100$</p>
+          <span>❎</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="card_container">
+    <!-- <div class='card m-4' style='width: 18rem;'>
+      <img class='card-img-top' src='./images/img-1.jpg' alt='${elem.name}'>
+      <div class='card-body'>
+        <p class='card-text'>${elem.desc}</p>
+        <div class='card-bott'>
+          <p class='prices'>$${elem.price}</p>
+          <button class='plus'>➕</button>
+          <p>0</p>
+          <button class='minus'>➖</button>
+        </div>
+      </div>
+    </div> -->
     
-    <header>
-        <h1>28 Days Later</h1>
-    </header>
-    <img src="img/background.png" alt="back">
+  </div>
+
+
 </body>
+
 </html>

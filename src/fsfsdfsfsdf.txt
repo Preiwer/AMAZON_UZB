@@ -1,0 +1,171 @@
+/*const card_container = document.getElementById("card_container");
+const search_btn = document.querySelector("#search_btn");
+const input = document.querySelector("#search");
+const basket = document.querySelector(".cardbtn_container");
+const dialog = document.querySelector(".dialog");
+const dial_close = document.querySelector(".close");
+const count = document.querySelector(".count");
+const dial_list = document.querySelector(".dialog .box .content");
+const total_price = document.querySelector(".total_price");
+const dial_total = document.querySelector(".dialog .total");
+
+let lists = [];
+let data = shopItemsData;
+
+function renderCards(items) {
+  card_container.innerHTML = items
+    .map((item) => {
+      return `<div class='card' style='width: 18rem;'>
+        <div class='card-body'>
+          <h4>${item.name}</h4>
+          <hr>
+          <img src='${item.img}' alt='${item.name}'>
+          <small class='card-text'>${item.desc}</small>
+          <hr>
+          <div class='card-bott'>
+            <h4 class='prices'>$${item.price}</h4>
+            <div class="indic">
+                <button class='plus'>➕</button>
+                <p class='num'>0</p>
+                <button class='minus'>➖</button>
+            </div>
+          </div>
+        </div>
+      </div>`;
+    })
+    .join("");
+}
+
+renderCards(data);
+
+const num = document.querySelectorAll(".num");
+
+document.addEventListener("click", (e) => {
+  if (e.target.id == "del") {
+    let index = e.target.dataset.index;
+    lists.splice(index, 1);
+    console.log(lists);
+    console.log(num);
+    lists.forEach((el,idx)=>{
+      // nu.innerHTML='dd'
+      console.log(num[idx]);
+      num[idx].innerHTML='0'
+    })
+    count.innerHTML = parseInt(count.innerHTML) - 1;
+    updateCart();
+  }
+});
+
+function addItemToList(index) {
+  let itemExists = false;
+
+  for (let i = 0; i < lists.length; i++) {
+    if (lists[i][0] == index) {
+      lists[i][2] += data[index].price;
+      itemExists = true;
+      break;
+    }
+  }
+
+  if (!itemExists) {
+    lists.push([index, data[index].name, data[index].price]);
+  }
+}
+
+function removeItemFromList(index) {
+  if (parseInt(num[index].innerHTML) !== 0) {
+    num[index].innerHTML = parseInt(num[index].innerText) - 1;
+
+    for (let i = 0; i < lists.length; i++) {
+      if (lists[i][0] == index) {
+        if (lists[i][2] > data[index].price) {
+          lists[i][2] -= data[index].price;
+        } else {
+          lists.splice(i, 1);
+        }
+        break;
+      }
+    }
+  }
+}
+
+function updateCart() {
+  count.innerHTML = lists.length;
+
+  dial_list.innerHTML = "";
+  for (let i = 0; i < lists.length; i++) {
+    dial_list.innerHTML += `
+      <div class="item">
+        <p>${lists[i][1]}</p>
+        <p>$${lists[i][2]}</p>
+        <button id='del' data-index='${i}'>❎</button>
+      </div>
+    `;
+  }
+
+  if (lists.length == 0) {
+    dial_list.innerHTML =
+      "<h2 class='emptbusk' style='font-weight:900'>Basket is empty</h2>";
+  }
+
+  calculateTotalPrice();
+}
+
+function calculateTotalPrice() {
+  let total = 0;
+
+  for (let i = 0; i < lists.length; i++) {
+    total += lists[i][2];
+  }
+
+  dial_total.innerHTML = `$ ${total}`;
+}
+
+function filteredItems() {
+  const searchText = input.value.trim().toLowerCase();
+  data = shopItemsData.filter((item) => {
+    return item.name.toLowerCase().includes(searchText);
+  });
+
+  if (data.length === 0) {
+    card_container.innerHTML =
+      "<h1 class='notfnd' style='z-index:1000; font-size: 100px; font-weight:900'>Nothing found</h1>";
+  } else {
+    renderCards(data);
+  }
+}
+
+basket.addEventListener("click", (e) => {
+  dialog.classList.toggle("active");
+});
+
+dial_close.addEventListener("click", (e) => {
+  dialog.classList.toggle("active");
+});
+
+card_container.addEventListener("click", (e) => {
+  if (e.target.classList.contains("plus")) {
+    const index = [...card_container.querySelectorAll(".plus")].indexOf(e.target); 
+
+    num[index].innerHTML= parseInt(num[index].innerText) + 1;
+    addItemToList(index);
+    console.group()
+    console.log(num[index]);
+    console.groupEnd()
+  }
+
+  if (e.target.classList.contains("minus")) {
+    const index = [...card_container.querySelectorAll(".minus")].indexOf(e.target); 
+    removeItemFromList(index);
+  }
+
+  updateCart();
+});
+
+search_btn.addEventListener("click", filteredItems);
+
+input.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
+    filteredItems();
+  }
+});*/

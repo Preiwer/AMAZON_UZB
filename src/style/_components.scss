@@ -1,0 +1,39 @@
+button {
+    @include the__blur;
+    &:hover {
+        @include hov()
+    }
+}
+
+input {
+    position: relative;
+    @include the__blur;
+    outline: none;
+}
+
+.cardbtn_container {
+    position: relative;
+    width: fit-content;
+    padding: 10px 5px;
+    .count {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        @include the__blur;
+        padding: 0 5px;
+        width: min-content;
+        height: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+}   
+
+img {
+    @include the__blur;
+    width: 100%;
+    padding: 0;
+    // height: ;
+}

@@ -1,0 +1,53 @@
+.card{
+    @include the__blur;
+    &:hover {
+        transform: scale(1.06)!important;
+    }
+}
+
+#card_container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: inherit;
+    // background-color: red;
+    margin: 10px 15px;
+    gap: 50px;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.card-bott{
+    display: flex;
+    flex-direction:center;
+    align-items: center;
+    justify-content: space-between;
+    .prices {
+        font-weight: bold;
+    }
+
+    .indic {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        gap: 5px;
+        p {
+            font-weight: bold;
+        }
+    }
+    .plus{
+        margin-left: 30px;
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 5px;
+        
+    }
+    .minus{
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 5px;
+
+    }
+    
+}

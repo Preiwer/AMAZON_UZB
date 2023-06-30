@@ -1,0 +1,65 @@
+.dialog {
+    @include the__blur;
+    backdrop-filter: blur(10px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -100%;
+    // @include the__blur;
+    background-color: $second_color;
+    border-color: $second_color;
+    border-radius: 0;
+    z-index: 10000;
+    transition: all .5s;
+}
+
+.active {
+    display: flex;
+    bottom: 0%;
+}
+
+.dialog .box {
+    @include the__blur;
+    width: 400px;
+    min-height: 400px;
+    .content {
+        overflow-y: auto;
+        max-height: 400px;
+    }
+    .item {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        @include the__blur;
+        gap: 50px;
+        padding: 10px 15px;
+        margin-bottom: 10px;
+        &:nth-last-child(1) {
+            margin-bottom: 0;
+        }
+        p {
+            margin-bottom: 0;
+            font-weight: bold;
+        }
+        span {
+            margin-bottom: 0;
+        }
+    }
+    .header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        .total {
+            font-weight: bolder;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: $main_color;
+        }
+    }
+    .emptbusk {
+        @include strk;
+    }
+}

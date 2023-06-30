@@ -1,0 +1,12 @@
+search_btn.addEventListener("click", (e) => {
+  card_container.innerHTML = "";
+  lists = shopItemsData.filter((txt) => {
+    return txt.name.includes(input.value);
+  });
+  console.log(lists);
+  echo_card(lists);
+  if (card_container.innerHTML == "") {
+    card_container.innerHTML =
+      "<h1 class='notfnd' style='z-index:1000; font-size: 100px; font-weight:900'>Nothing found</h1>";
+  }
+});

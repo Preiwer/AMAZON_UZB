@@ -1,0 +1,19 @@
+header {
+    @include the__blur;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 15px;
+    padding: 15px 20px;
+}
+
+.search_container {
+    input {
+        width: 600px;
+    }
+}
+
+.logo h1 {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgba(255,255,255,.8);
+}
